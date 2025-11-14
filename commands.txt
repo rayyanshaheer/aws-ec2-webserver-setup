@@ -1,0 +1,6 @@
+sudo apt update
+sudo apt install -y nginx php-fpm
+sudo systemctl enable nginx
+sudo systemctl start nginx
+echo "<?php echo 'Hello from Rayyan'; ?>" | sudo tee /var/www/html/index.php
+sudo chown -R www-data:www-data /var/www/html
